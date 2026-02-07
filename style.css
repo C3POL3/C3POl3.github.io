@@ -1,0 +1,193 @@
+/* ELEMENTS */
+body {
+    background-color: black;
+    background-image: url(sdf.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    font-family: 'Inconsolata', monospace;
+    color: skyblue;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+a {
+    color:rgb(98, 98, 255);
+}
+
+a:visited {
+    color: rgb(29, 49, 165);
+}
+
+a:hover {
+    color: rgb(143, 141, 255);
+}
+
+blockquote {
+    color: rgb(25, 12, 206);
+    text-align: center;
+}
+
+
+/* terminal stuff */
+.terminal_box {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid lightblue;
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.prompt {
+    position: relative;
+    padding-left: 25px;
+}
+
+.prompt::before {
+    content: ">";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: rgb(47, 50, 255);
+}
+
+/* ANIMATIONS */
+
+@keyframes cursor {
+    50% { opacity: 0; }
+}
+
+.cursor::after {
+    content: "_";
+    animation: cursor;
+    animation-duration: 1s;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-play-state: running;
+}
+
+/* ===================================================== TIMER ===================================================== */ 
+.timer_body {
+  font-family: 'Inconsolata', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: skyblue;
+  background-image: url(sdf.png);
+  background-position: right;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#countdown {
+    padding: 40px 60px;
+    text-align: center;
+    display: flex;
+}
+
+#timer {
+    display: block;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.timer-unit {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    display: block;
+}
+
+.timer_nav {
+    justify-content: center;
+    display: flex;
+}
+
+/* ===================================================== FORM ===================================================== */
+
+.form_body {
+  font-family: 'Inconsolata', monospace;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: skyblue;
+  background-image: url(sdf.png);
+  background-position: right;
+  position: relative;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.timer_nav {
+    text-align: center;
+}
+
+.form_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 400px;
+}
+
+.form_ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form_button {
+    padding-left: 125px;
+    border-color: blue;
+}
+
+.form_form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 5px solid skyblue;
+    border-radius: 1em;
+}
+
+.form_form li+li {
+margin-top: 1em;
+}
+
+.form_label {
+    display: inline-grid;
+    width: 120px;
+    text-align: right;
+}
+
+.form_input {
+    font: 1em sans-serif;
+    box-sizing: border-box;
+    border: 1px solid blue;
+    background-color: skyblue;
+    color: black;
+}
+
+.form_textarea {
+    font: 1em sans-serif;
+    box-sizing: border-box;
+    border: 1px solid blue;
+    background-color: skyblue;
+    color: black;
+    vertical-align: top;
+    height: 5em;
+}
